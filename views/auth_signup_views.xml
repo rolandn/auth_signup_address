@@ -33,13 +33,13 @@
                 <input type="text" name="phone" id="phone" class="form-control" autocapitalize="on"
                        placeholder="Phone number" required="required"/>
             </div>
-            <div t-if="auth_signup_with_date_of_birth" id="auth_signup_with_date_of_birth_view">
+       <!--     <div t-if="auth_signup_with_date_of_birth" id="auth_signup_with_date_of_birth_view">
                 <div t-if="not token" class="form-group">
                     <label for="date_of_birth" class="control-label">Date of Birth</label>
                     <input type="date" name="date_of_birth" id="date_of_birth" class="form-control"
                            required="required"/>
                 </div>
-            </div>
+            </div> -->
             <div t-if="auth_signup_with_address" id="auth_signup_with_address_view">
                 <div t-if="not token" class="form-group">
                     <label for="street" class="control-label">Address</label>
@@ -54,7 +54,7 @@
                     <input type="text" name="city" id="city" class="form-control" autocapitalize="on"
                            placeholder="City" required="required"/>
                 </div>
-                <div t-if="not token" class="form-group">
+          <!--      <div t-if="not token" class="form-group">
                     <select name="state_id" id="state_id" class="form-control">
                         <option value="">State...</option>
                         <t t-foreach="states or []" t-as="state">
@@ -63,7 +63,7 @@
                             </option>
                         </t>
                     </select>
-                </div>
+                </div>  -->
                 <div t-if="not token" class="form-group">
                     <select name="country_id" id="country_id" class="form-control">
                         <option value="">Country...</option>
