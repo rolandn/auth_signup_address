@@ -27,7 +27,7 @@ class ResConfigSettings(models.TransientModel):
 
     @api.multi
     def set_values(self):
-        res = super(ResConfigSettings, self).set_values()
+        super(ResConfigSettings, self).set_values()
         set_param = self.env['ir.config_parameter'].sudo().set_param
         set_param('auth_signup_with_phone', repr(self.auth_signup_with_phone))
         set_param('auth_signup_with_address', repr(self.auth_signup_with_address))
@@ -35,5 +35,3 @@ class ResConfigSettings(models.TransientModel):
         set_param('auth_signup_with_image', repr(self.auth_signup_with_image))
         set_param('auth_signup_with_captcha', repr(self.auth_signup_with_captcha))
         set_param('auth_login_with_captcha', repr(self.auth_login_with_captcha))
-
-        return res
